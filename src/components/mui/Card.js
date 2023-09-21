@@ -10,11 +10,11 @@ export default function PlaceCard(props) {
   const { imageUrl, title, description } = props;
 
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ maxWidth: 250, Height:350}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="200"
+          height="150"
           width="70"
           image={imageUrl}
           alt={title }
@@ -29,6 +29,8 @@ export default function PlaceCard(props) {
         </CardContent>
       </CardActionArea>
     </Card>
+    
   );
 }
+
 

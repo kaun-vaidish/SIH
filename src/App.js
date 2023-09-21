@@ -1,13 +1,12 @@
 import React from "react";
-import { styled } from "@mui/material";
 import Navbar from "./components/navbar/Navbar";
 import "./app.css";
 import PlaceCard from "./components/mui/Card";
 
-// import Planyourtrip from "./components/planyourtrip/plan-your-trip";
-// import Chooselocations from "./components/chooselocations/chooselocations";
-// import Mui from "./components/mui/Mui";
-// import ResponsiveAppBar from "./components/mui/NavbarMui";
+import Planyourtrip from "./components/planyourtrip/plan-your-trip";
+import Chooselocations from "./components/chooselocations/chooselocations";
+
+
 
 const App = () => {
   return (
@@ -61,10 +60,10 @@ const App = () => {
         />
       </div>
 
-      {/* <Planyourtrip /> */}
-      {/* <Chooselocations/> */}
-      {/* <Mui/> */}
-      {/* <ResponsiveAppBar/> */}
+      <Planyourtrip />
+      <Chooselocations/>
+      
+      
     </>
   );
 };
