@@ -10,11 +10,11 @@ export default function PlaceCard(props) {
   const { imageUrl, title, description } = props;
 
   return (
-    <Card sx={{ maxWidth: 250, Height:350}}>
+    <Card sx={{ maxWidth: 220, Height:350}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="150"
+          height="200"
           width="70"
           image={imageUrl}
           alt={title }
@@ -23,7 +23,7 @@ export default function PlaceCard(props) {
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" fontSize={10}>
             {description }
           </Typography>
         </CardContent>

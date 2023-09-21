@@ -95,6 +95,8 @@
 import * as React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+import CreateIcon from '@mui/icons-material/Create';
+import { Button } from "@mui/material";
 
 const types = [
   "HistoricalSites",
@@ -130,13 +132,33 @@ const Chooselocations = () => {
     setSelectedPlaces(newValue);
   };
 
+  const containerStyle = {
+    display: "flex",
+    alignItems: "center", 
+    padding: "20px 100px",
+  };
+
+  const autocompleteStyle = {
+    flex: 1, // Allow Autocomplete components to grow and take available space
+    marginRight: "16px", // Add some spacing between the components
+    padding: "20px",
+  };
+  
+
+  const buttonStyle = {
+    marginLeft: "auto" ,// Push the button to the right side of the container
+    
+  };
+
   return (
     <>
+    <div style={containerStyle}>
       <Autocomplete
         disablePortal
         id="combo-box-demo"
         options={types}
         value={selectedType}
+        sx={autocompleteStyle}
         onChange={handleTypeChange}
         renderInput={(params) => (
           <TextField {...params} label="Select type of attractions..." />
@@ -148,6 +170,8 @@ const Chooselocations = () => {
         id="tags-outlined"
         options={selectedType ? places[selectedType] : []}
         value={selectedPlaces}
+        sx={autocompleteStyle}
+        // size="small"
         onChange={handlePlacesChange}
         getOptionLabel={(option) => option}
         filterSelectedOptions
@@ -159,6 +183,10 @@ const Chooselocations = () => {
           />
         )}
       />
+      <Button startIcon={<CreateIcon />} variant="outlined" color="primary" style={buttonStyle}>
+        Create your plan
+      </Button>
+      </div>
     </>
   );
 };

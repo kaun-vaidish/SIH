@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
+// import Navbar from "./components/navbar/Navbar";
+import Landingpage from "./components/landingpage/landingpage";
 import "./app.css";
 import PlaceCard from "./components/mui/Card";
 
@@ -11,8 +12,8 @@ import Chooselocations from "./components/chooselocations/chooselocations";
 const App = () => {
   return (
     <>
-      <Navbar />
-
+      {/* <Navbar /> */}
+      <Landingpage/>
       <div className="card-container">
         <PlaceCard
           imageUrl="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/08/02112702/taj-mahal-1024x682.jpeg"
