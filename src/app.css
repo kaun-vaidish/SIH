@@ -101,7 +101,11 @@
     text-align: center;
    }
 
-
+   .card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px; /* Adjust as needed */
+  }
 
 
 
