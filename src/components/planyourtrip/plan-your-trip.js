@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./planyourtrip.css";
-// import "C:/Users/Vaidish Thosar/Documents/GitHub/SIH/sih/src/components/chooselocations/chooselocations.css";
 
 const Planyourtrip = () => {
   const [destination, setDestination] = useState("");
