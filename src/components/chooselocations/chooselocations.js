@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./chooselocations.css";
 //import Select from 'react-select';
 
+
 function Chooselocations() {
   const [myList, setMyList] = useState([]);
   const [selectTypes, setSelectTypes] = useState("");
@@ -79,7 +80,10 @@ function Chooselocations() {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      
+
     </div>
+    
   );
 }
 

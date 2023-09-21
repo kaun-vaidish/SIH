@@ -164,6 +164,7 @@ class Navbar extends Component {
             ></i>
           </div>
         </nav>
+        
       </>
     );
   }

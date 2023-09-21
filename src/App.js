@@ -8,11 +8,8 @@ const App = () => {
   return (
     <>
       <Navbar/>
-      {/* <div style={{ clear: 'both' }}></div> */}
       <Planyourtrip />
-      {/* <div style={{ clear: 'both' }}></div> */}
       <Chooselocations/>
-      {/* <div style={{ clear: 'both' }}></div> */}
       
     </>
   );
