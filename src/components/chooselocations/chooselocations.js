@@ -1,102 +1,10 @@
-// import React, { useState } from "react";
-// import "./chooselocations.css";
-// //import Select from 'react-select';
-
-// function Chooselocations() {
-//   const [myList, setMyList] = useState([]);
-//   const [selectTypes, setSelectTypes] = useState("");
-
-// const types = [
-//   "HistoricalSites",
-//   "Parks",
-//   "Museums",
-//   "Temples",
-//   "Markets",
-//   "LakesAndDams",
-//   "Nightlife",
-//   "HiddenGems",
-// ];
-//   const [selectPlaces, setSelectPlaces] = useState("");
-// const places = {
-//   HistoricalSites: ["Shaniwar Wada", "Aga Khan Palace"],
-//   Parks: ["Peshwa Udyan Zoo", "Empress Garden"],
-//   Museums: ["Raja Dinkar Kelkar Museum", "Mahatma Phule Museum"],
-//   Temples: ["Dagdusheth Halwai", "Ramdhara"],
-//   Markets: ["FC Road", "Laxmi Road"],
-//   LakesAndDams: ["Pawna lake", "Panshet dam"],
-//   Nightlife: ["Koregaon park"],
-//   HiddenGems: ["Rihegaon dam", "Kundmala"],
-// };
-
-//   const handleTypeChange = (event) => {
-//     const type = event.target.value;
-//     setSelectTypes(type);
-
-//     setSelectPlaces(null);
-//   };
-
-//   const handlePlaceChange = (event) => {
-//     const place = event.target.value;
-//     setSelectPlaces(place);
-//     setMyList([...myList, place]);
-//   };
-
-//   return (
-//     <div>
-//       <h2>Select a Location:</h2>
-//       <div>
-//         <label>Select Type:</label>
-//         <select value={selectTypes} onChange={handleTypeChange}>
-//           <option value="">Select Type</option>
-//           {types.map((type) => (
-//             <option key={type} value={type}>
-//               {type}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-//       {selectTypes && (
-//         <div>
-//           <label>Select Place:</label>
-//           <select value={selectPlaces} onChange={handlePlaceChange}>
-//             <option value="">Select Place</option>
-//             {places[selectTypes].map((place) => (
-//               <option key={place} value={place}>
-//                 {place}
-//               </option>
-//             ))}
-//           </select>
-//         </div>
-//       )}
-//       {/* {selectTypes && selectPlaces && (
-//         <div>
-//           <p>You have selected: {selectPlaces} in {selectTypes}</p>
-//         </div>
-//       )} */}
-
-//       <ul>
-//         {myList.map((item, index) => (
-//           <li key={index}>{item}</li>
-//         ))}
-//       </ul>
-
-//     </div>
-
-//   );
-// }
-
-// export default Chooselocations;
-
-
-
 
 
 
 import * as React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import CreateIcon from '@mui/icons-material/Create';
-import { Button } from "@mui/material";
+import EditCalendarTwoToneIcon from '@mui/icons-material/EditCalendarTwoTone';import { Button, Typography } from "@mui/material";
 
 const types = [
   "HistoricalSites",
@@ -134,58 +42,78 @@ const Chooselocations = () => {
 
   const containerStyle = {
     display: "flex",
-    alignItems: "center", 
+    alignItems: "center",
     padding: "20px 100px",
   };
 
   const autocompleteStyle = {
-    flex: 1, // Allow Autocomplete components to grow and take available space
-    marginRight: "16px", // Add some spacing between the components
+    flex: 1,
+    marginRight: "16px",
     padding: "20px",
   };
-  
 
   const buttonStyle = {
-    marginLeft: "auto" ,// Push the button to the right side of the container
-    
+    marginLeft: "auto",
   };
+
+  const optionTextStyle = {
+    color: "black", 
+  };
+
+  const buttonText = selectedPlaces.length === 0 ? "Voyage Virtuoso plan" : "Create your plan";
+
+  const textStyle = {
+    marginLeft:"120px", 
+    padding: "5px",
+    alignItems: "center",
+    
+  }
 
   return (
     <>
-    <div style={containerStyle}>
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={types}
-        value={selectedType}
-        sx={autocompleteStyle}
-        onChange={handleTypeChange}
-        renderInput={(params) => (
-          <TextField {...params} label="Select type of attractions..." />
-        )}
-      />
+      <div style={textStyle}>
+        <Typography>
+      <h1 style={{ color: "black", fontSize: "20px",fontFamily: "cursive" }}>Your can include your custom places or let us plan your complete trip for you </h1>
+      </Typography>
+      </div>      
+      <div style={containerStyle}>
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={types}
+          value={selectedType}
+          sx={autocompleteStyle}
+          getOptionLabel={(option) => option}
+          onChange={handleTypeChange}
+          renderInput={(params) => (
+            <TextField {...params} label="Select type of attractions..." />
+          )}
+          renderOption={(props, option) => (
+            <li {...props} style={{ color: 'black' }}>{option}</li>
+          )}
+          
+          
+        />
 
-      <Autocomplete
-        multiple
-        id="tags-outlined"
-        options={selectedType ? places[selectedType] : []}
-        value={selectedPlaces}
-        sx={autocompleteStyle}
-        // size="small"
-        onChange={handlePlacesChange}
-        getOptionLabel={(option) => option}
-        filterSelectedOptions
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Select places..."
-            // placeholder="Favorites"
-          />
-        )}
-      />
-      <Button startIcon={<CreateIcon />} variant="outlined" color="primary" style={buttonStyle}>
-        Create your plan
-      </Button>
+        <Autocomplete
+          multiple
+          id="tags-outlined"
+          options={selectedType ? places[selectedType] : []}
+          value={selectedPlaces}
+          sx={autocompleteStyle}
+          onChange={handlePlacesChange}
+          getOptionLabel={(option) => (
+            <span style={optionTextStyle}>{option}</span>
+          )}
+          filterSelectedOptions
+          renderInput={(params) => (
+            <TextField {...params} label="Select places..." />
+          )}
+          
+        />
+        <Button variant="outlined" color="primary" style={buttonStyle}>
+          {buttonText}
+        </Button>
       </div>
     </>
   );

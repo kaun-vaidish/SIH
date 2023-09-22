@@ -1,5 +1,4 @@
 import React from "react";
-// import Navbar from "./components/navbar/Navbar";
 import Landingpage from "./components/landingpage/landingpage";
 import "./app.css";
 import PlaceCard from "./components/mui/Card";

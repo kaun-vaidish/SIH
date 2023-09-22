@@ -23,10 +23,7 @@ const Landingpage = () => {
       <Button  variant="contained" startIcon={<SearchIcon />} color="info">
         Explore
       </Button>
-
-      {/* <div className="homeButton">
-        Explore
-      </div> */}
+      
     </div>
   );
 };
