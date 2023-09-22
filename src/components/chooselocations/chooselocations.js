@@ -1,10 +1,8 @@
-
-
-
 import * as React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import EditCalendarTwoToneIcon from '@mui/icons-material/EditCalendarTwoTone';import { Button, Typography } from "@mui/material";
+import EditCalendarTwoToneIcon from '@mui/icons-material/EditCalendarTwoTone';
+import { Button, Typography } from "@mui/material";
 
 const types = [
   "HistoricalSites",

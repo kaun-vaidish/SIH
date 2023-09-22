@@ -1,0 +1,84 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 40px; 
+  }
+
+   /* .place-card {
+    position: relative;
+    transition: filter 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  .place-card:hover .card-content {
+    opacity: 1;
+  }
+  
+  .place-card:hover .image {
+    filter: blur(1px);
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white; 
+    padding: 10px; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image {
+    transition: filter 0.3s ease-in-out;
+  }
+   */
+
+
+   .place-card {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 220px; /* Initial width */
+    height: 220px; /* Initial height */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .place-card:hover {
+    width: 280px; /* Increased width on hover */
+    height: 290px; /* Increased height on hover */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .place-card:hover .card-content {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .place-card:hover .image {
+    filter: blur(0px);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+  }
+  
+  .image {
+    transition: filter 0.3s ease-in-out;
+  }
+  

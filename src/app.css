@@ -101,11 +101,7 @@
     text-align: center;
    }
 
-   .card-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 40px; /* Adjust as needed */
-  }
+   
 
 
 

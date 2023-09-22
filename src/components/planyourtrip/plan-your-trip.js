@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Button, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { ClassNames } from "@emotion/react";
 
 const allowedOptions = [
   "Pune",
@@ -53,10 +54,10 @@ const textStyle = {
 
 export default function Planyourtrip() {
   return (
-    <>
+    <div className="PlanYourTrip">
       <div style={textStyle}>
         <Typography>
-      <h1 style={{ color: "black", fontSize: "60px",fontFamily: "cursive" }}>Ready to plan your trip ?</h1>
+      <h1 style={{ color: "black", fontSize: "60px" }}>Ready to plan your trip ?</h1>
       </Typography>
       </div>
 
@@ -87,6 +88,6 @@ export default function Planyourtrip() {
           Search for places
         </Button>
       </div>
-    </>
+    </div>
   );
 }
