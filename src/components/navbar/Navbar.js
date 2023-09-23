@@ -2,6 +2,8 @@
 
 import { Component } from "react";
 import "./Navbar.css";
+import logo from "./logo.jpg"
+import { blueGrey } from "@mui/material/colors";
 
 class Navbar extends Component {
   state = { clicked: false };
@@ -9,6 +11,9 @@ class Navbar extends Component {
     this.setState({ clicked: !this.state.clicked });
   };
   render() {
+    const logoStyle = {
+      filter: "brightness(1)", // Adjust the brightness as needed
+    };
     return (
       <>
         <nav>
@@ -20,17 +25,24 @@ class Navbar extends Component {
               viewBox="0 0 132 35"
               fill="none"
               
-              xmlns="http://www.w3.org/2000/svg"
+              
             >
               <image
-                href="C:\Users\Vaidish Thosar\Documents\GitHub\SIH\sih\public\logo.jpg"
+                href="./logo.jpg"
                 x="0"
                 y="0"
                 width="132"
-                height="35"
+                height="40"
+                enableBackground={blueGrey}
+                style={logoStyle}
               />
               
             </svg>
+            {/* <img src={logo} x="0"
+                y="0"
+                width="35"
+                height="35" 
+                alt="logo" /> */}
           </a>
 
           <div>
@@ -45,7 +57,7 @@ class Navbar extends Component {
                 </a>
               </li>
               <li>
-                <a href="index.html">Plan your trip </a>
+                <a href="index.html">Explore </a>
               </li>
               <li>
                 <a href="index.html">Login</a>

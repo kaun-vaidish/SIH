@@ -11,12 +11,13 @@ import Chooselocations from "./components/chooselocations/chooselocations";
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
+    
       <Landingpage/>
       <Explore/>
 
       <Planyourtrip />
       <Chooselocations/>
+      
       
       
     </>

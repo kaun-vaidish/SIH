@@ -5,11 +5,20 @@ import BgVideo from "./background.jpg";
 import { Button,Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
+
+
+
+// import { useNavigate } from 'react-router-dom';
+// const navigate = useNavigate();
+// navigate('/home');
+
 const Landingpage = () => {
+  
+
   return (
     <div className="landingpage">
       {/* <video src={BgVideo} autoPlay loop className="video-bg" /> */}
-      <img src={BgVideo} className="video-bg" alt="background img"/>
+      <img src={BgVideo} className="video-bg" alt="background im"/>
       <div className="bg-overlay"></div>
       <div className="navbar">
         <Navbar />
@@ -21,8 +30,8 @@ const Landingpage = () => {
         </Typography>
       </div>
 
-      <Button  variant="contained" startIcon={<SearchIcon />} color="info">
-        Explore
+      <Button  variant="contained" startIcon={<SearchIcon />} color="info" >
+        Plan your trip
       </Button>
       
     </div>
