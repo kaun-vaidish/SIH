@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+
+-	The aim of the proposed travel planning website is to revolutionize and enhance the user experience in Indian tourism by offering a comprehensive, personalized, and efficient platform that addresses the current limitations of existing websites, ultimately providing users with a seamless and enriching travel planning experience.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
